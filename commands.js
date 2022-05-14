@@ -186,6 +186,8 @@ db.bounties.find({},{client: 0})
 
 // 4. Query for a Groundhog in the Woodlands
 db.bounties.find({species: "Groundhog", location: "Woodlands"})
+//or
+db.bounties.find( {$and: [{species: "Groundhog", location: "Woodlands"}]} )
 //returns
 // { _id: ObjectId("627ff38f226aeca45cce751b"),
 //   name: 'Grandhog',
